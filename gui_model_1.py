@@ -17,14 +17,20 @@ history['Prognose duur'] = []
 history['Voorspelling datumtijd'] = []
 history['Voorspelling duur'] = []
 
-dash_beschrijving = "Wij hebben gesteld dat als de prognose eerder is dan dat de "\
-        "aannemer ter plaatse is, wij dat zien als foutieve data. Ook als de prognose gelijk is aan "\
-        "de tijd dat de aannemer ter plaatse is, concluderen wij dat de storing geen effect heeft op "\
-        "het treinverkeer en we die dus ook niet meenemen. Dit komt neer op dat dit model gebasseerd is op "\
-        "de prognose van de aannemer en je alleen gebruik kan maken van dit model als de prognose later is "\
-        "dan dat de aannemer ter plaatse is. In dit model worden ook RMSE's weergegeven. Dit zijn de RMSE's van" \
-        " de prognose van de aannemer en de RMSE van ons model. De RMSE houdt in hoeveel de voorspelling (gemiddeld)" \
-        " van de daadwerkelijke data af ligt."
+
+dash_beschrijving = '''
+Als input verwacht het dashboard: de prognose van de aannemer en het tijdstip wanneer de aannemer ter plaatse was.
+Om de reparatie duur prognose te berekenen en uiteindelijk als input te gebruiken voor het model.
+
+RMSE waardes:
+    Prognose van de aannemer: RMSE is 45.59.
+    Gewijzigde prognose door model: RMSE is 35.55.
+
+
+    wat is RMSE:
+    RMSE duid de gemiddelde kwaliteit van voorspellingen aan.
+    De RMSE geeft aan hoe groot de fout gemiddeld was van een groep voorspellingen, hoe lager de RMSE hoe beter de voorspellingen.
+'''
 
 
 def predict(aanntpl_ddt, prog_ddt):
